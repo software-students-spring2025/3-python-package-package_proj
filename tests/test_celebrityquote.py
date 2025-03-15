@@ -1,5 +1,5 @@
 import pytest
-from src.quotes.generator import generate_celebrity_quote
+from src.quotes import generate_celebrity_quote
 
 def test_generate_celebrity_quote_valid():
     """Test that a celebrity quote is generated correctly."""
@@ -15,20 +15,21 @@ def test_generate_celebrity_quote_invalid_empty():
 def test_generate_celebrity_quote_invalid_single_letter():
     """Test that a single letter returns an error."""
     quote = generate_celebrity_quote("A")
-    assert quote == "Error: Invalid celebrity name. Please enter a full name."
+    print(f"DEBUG: Actual Output: {quote}")  # Debugging line
+    assert quote == "Error: Invalid celebrity name. Please enter a first and last name."
 
 def test_generate_celebrity_quote_invalid_symbols():
     """Test that names with symbols return an error."""
     quote = generate_celebrity_quote("@#$%")
-    assert quote == "Error: Invalid celebrity name. Please enter a full name."
+    assert quote == "Error: Invalid celebrity name. Please enter a first and last name."
 
 def test_generate_celebrity_quote_invalid_numbers():
     """Test that numbers return an error."""
     quote = generate_celebrity_quote("12345")
-    assert quote == "Error: Invalid celebrity name. Please enter a full name."
+    assert quote == "Error: Invalid celebrity name. Please enter a first and last name."
 
 def test_generate_celebrity_quote_invalid_mixed():
     """Test that mixed symbols and numbers return an error."""
     quote = generate_celebrity_quote("Einstein123!")
-    assert quote == "Error: Invalid celebrity name. Please enter a full name."
-    
+    assert quote == "Error: Invalid celebrity name. Please enter a first and last name."
+

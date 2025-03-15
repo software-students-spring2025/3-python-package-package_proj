@@ -28,31 +28,32 @@ def generate_quote():
     my_quotes.add(quote)
     return quote
 
-import re
+
 
 def generate_celebrity_quote(celebrity):
     """Generates a quote attributed to a specific celebrity, with input validation."""
     global my_quotes
 
-    # 🔹 Reject empty input or non-string values
+    # Ensure input is a valid full name
     if not isinstance(celebrity, str) or not celebrity.strip():
         return "Error: Celebrity name must be a valid string."
 
-    # 🔹 Reject single letters, numbers, and names with symbols
-    if len(celebrity) == 1 or re.search(r"[^a-zA-Z\s]", celebrity):  
-        return "Error: Invalid celebrity name. Please enter a full name."
+    # Reject invalid names (single words, numbers, special chars)
+    if not re.fullmatch(r"[A-Za-z]+(?:\s[A-Za-z]+)+", celebrity):
+        return "Error: Invalid celebrity name. Please enter a first and last name."
 
     prompt = f'Generate a famous quote that sounds like it was said by {celebrity}.'
 
     try:
-        quote = chatgpt_generate(prompt)  # Uses ChatGPT API
+        quote = chatgpt_generate(prompt)
         if quote:
+            quote = re.sub(rf'\b{celebrity}\b[.:!?]?\s*$', '', quote, flags=re.IGNORECASE).strip()
             my_quotes.add(quote)
             return quote
     except openai.OpenAIError:
-        pass  # If ChatGPT fails, fallback to predefined quotes
+        pass
 
-    # Fallback quotes dictionary
+    # Fallback dictionary
     celebrity_quotes = {
         "Albert Einstein": [
             "Imagination is more important than knowledge.",
@@ -64,7 +65,7 @@ def generate_celebrity_quote(celebrity):
         ],
     }
 
-    # Use a fallback quote if ChatGPT fails
+    # Return fallback quote if available
     if celebrity in celebrity_quotes:
         available_quotes = [q for q in celebrity_quotes[celebrity] if q not in my_quotes]
         if available_quotes:
@@ -73,6 +74,7 @@ def generate_celebrity_quote(celebrity):
             return quote
 
     return f"Sorry, no quotes available for {celebrity}."
+
 
 
 def generate_mood_quote(mood):

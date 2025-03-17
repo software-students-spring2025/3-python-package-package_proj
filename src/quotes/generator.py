@@ -65,6 +65,7 @@ def generate_celebrity_quote(celebrity):
     }
 
     # Use a fallback quote if ChatGPT fails
+
     if celebrity in celebrity_quotes:
         available_quotes = [q for q in celebrity_quotes[celebrity] if q not in my_quotes]
         if available_quotes:
@@ -74,9 +75,32 @@ def generate_celebrity_quote(celebrity):
 
     return f"Sorry, no quotes available for {celebrity}."
 
-
 def generate_mood_quote(mood):
-    return
+    global my_quotes
+    
+    if not isinstance(mood, str) or not mood.isalpha():
+        return "Error: Mood must be a valid string."
+
+    prompt = f'Generate a unique inspirational quote that matches the mood: {mood}.'
+
+    try:
+        quote = chatgpt_generate(prompt)
+        if quote:
+            my_quotes.add(quote)
+            return quote
+    except openai.OpenAIError:
+        pass
+
+    mood_quotes = quotes.get(mood.lower(), [])
+
+    available_quotes = [q for q in mood_quotes if q not in my_quotes]
+
+    if not available_quotes:
+        return f"No new fallback quotes left! Try again later."
+    
+    quote = random.choice(available_quotes)
+    my_quotes.add(quote)
+    return quote
 
 def generate_language_quote(language):
     return

@@ -1,5 +1,6 @@
 import pytest
-from src.quotes import generate_celebrity_quote
+import openai
+from quotes.generator import generate_celebrity_quote
 
 def test_generate_celebrity_quote_valid():
     """Test that a celebrity quote is generated correctly."""

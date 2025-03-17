@@ -135,5 +135,3 @@ def generate_language_quote(language):
     quote = random.choice(available_quotes)
     my_quotes.add(quote)
     return quote
-
-    return

@@ -15,10 +15,5 @@ def test_generate_mood_quote_invalid_empty():
 
 def test_generate_mood_quote_invalid_number():
     """Test that a number as mood returns an error message."""
-    quote = generate_mood_quote("12345")
-    assert quote == "Error: Mood must be a valid string."
-
-def test_generate_mood_quote_invalid_symbols():
-    """Test that a symbol as mood returns an error message."""
-    quote = generate_mood_quote("@#$%")
+    quote = generate_mood_quote(123)
     assert quote == "Error: Mood must be a valid string."

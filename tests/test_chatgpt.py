@@ -6,6 +6,7 @@ from quotes.chatgpt import chatgpt_generate
 # Get logger
 logger = logging.getLogger(__name__)
 
+
 def test_api_connection_and_quote_generation(caplog):
     """Test if the API connects and generates a quote."""
     with caplog.at_level(logging.INFO):  # ✅ Ensures logging is captured

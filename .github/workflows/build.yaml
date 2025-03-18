@@ -13,6 +13,8 @@ jobs:
         uses: kojoru/prepare-pipenv@v1
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Create .env file
+        run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
       - name: Turn on 'editable' mode
         run: |
           pipenv install -e . --skip-lock

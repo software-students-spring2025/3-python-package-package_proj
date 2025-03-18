@@ -1,4 +1,4 @@
-name: CI / CD
+name: CI
 on: [pull_request] # supposed to be pull?
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Turn on 'editable' mode
         run: |
-          pipenv install -e .
+          pipenv install -e . --skip-lock
       - name: Test with pytest
         run: |
           pipenv install pytest

@@ -1,5 +1,8 @@
 name: CI
-on: [pull_request] # supposed to be pull?
+on:
+  pull_request:
+    branches:
+      - main  # Run only when a PR is opened or updated on `main`
 jobs:
   build:
     runs-on: ubuntu-latest

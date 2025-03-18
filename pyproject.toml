@@ -3,20 +3,23 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "my_project"
+name = "Quotes"
 version = "0.1.0"
-description = "A simple Python project"
+description = "DailyQuotes is a simple Python package that generates random quotes including quotes that are well-known, from celebrities, mood based, and in different languages. This python package provides an easy way to integrate meaningful quotes into projects, daily routines, or personal motivation."
 authors = [
-    {name = "Alice Doe", email = "alice@example.com"},
-    {name = "Bob Smith", email = "bob@example.com"}
-]
-license = {text = "MIT"}
+{ name = "Andy Cabindol", email = "acc7936@nyu.edu" },
+{ name = "Andy Cabindol", email = "acc7936@nyu.edu" },
+{ name = "Andy Cabindol", email = "acc7936@nyu.edu" },
+{ name = "Andy Cabindol", email = "acc7936@nyu.edu" }]
+license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 
 [project.dependencies]
-requests = "^2.31.0"
-numpy = "^1.26.0"
+setuptools = "*"
+python-dotenv = "*"
+openai = "*"
 
 [project.optional-dependencies]
-dev = ["pytest", "black", "flake8"]
+dev = ["pytest"]
+

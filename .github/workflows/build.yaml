@@ -13,13 +13,19 @@ jobs:
         uses: kojoru/prepare-pipenv@v1
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Create .env file
-        run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
+        run: |
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
+          cat .env  # Debugging: Show contents of .env (remove this if it works)
+
       - name: Turn on 'editable' mode
+        run: pipenv install -e . --skip-lock
+
+      - name: Install pytest
+        run: pipenv install pytest
+
+      - name: Load environment variables & Run tests
         run: |
-          pipenv install -e . --skip-lock
-      - name: Test with pytest
-        run: |
-          pipenv install pytest
-          pipenv --venv
-          pipenv run python -m pytest
+          pipenv run python -c "import dotenv; dotenv.load_dotenv()"
+          pipenv run pytest

@@ -8,6 +8,7 @@ def test_generate_celebrity_quote_valid():
     assert isinstance(quote, str), "Output should be a string"
     assert len(quote) > 0, "Generated quote should not be empty"
 
+
 def test_generate_celebrity_quote_invalid_empty():
     """Test that an empty string returns an error message."""
     quote = generate_celebrity_quote("")

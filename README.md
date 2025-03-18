@@ -4,18 +4,18 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 
 Contributors:
 
-Aaqila Patel 
+Aaqila Patel
 [https://github.com/aaqilap]
 
-Andy Cabindol 
+Andy Cabindol
 [https://github.com/andycabindol]
 
-Lina Sanchez 
+Lina Sanchez
 [https://github.com/linahsan]
+
+Maya Mabry
+[https://github.com/mam10023]
 
 Description:
 
-DailyQuotes is a simple Python package that generates random quotes including quotes that are well-known, from celebrities, mood based, and in different languages. This python package provides an easy way to integrate meaningful quotes into projects, daily routines, or personal motivation.  
-
-
-
+DailyQuotes is a simple Python package that generates random quotes including quotes that are well-known, from celebrities, mood based, and in different languages. This python package provides an easy way to integrate meaningful quotes into projects, daily routines, or personal motivation.

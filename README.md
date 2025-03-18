@@ -1,5 +1,7 @@
 # Python Package Exercise
 
+![CI](https://github.com/YOUR_USERNAME/3-python-package-package_proj/actions/workflows/build.yaml/badge.svg)
+
 An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
 
 Contributors:

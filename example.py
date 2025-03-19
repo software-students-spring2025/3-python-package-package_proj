@@ -1,12 +1,6 @@
 """Example program demonstrating all functions in the Quotes package."""
-import sys 
-import os 
-
-sys.path.insert(0, os.path.abspath("src"))
-
 
 from quotes.generator import generate_quote, generate_celebrity_quote, generate_language_quote, generate_mood_quote
-
 
 def demonstrate_quotes():
     print("\n--- Quotes Package Demonstration ---")

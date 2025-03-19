@@ -9,8 +9,11 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 ## Contributors:
 
 [Aaqila Patel](https://github.com/aaqilap)
+
 [Andy Cabindol](https://github.com/andycabindol)
+
 [Lina Sanchez](https://github.com/linahsan)
+
 [Maya Mabry](https://github.com/mam10023)
 
 ## Description:

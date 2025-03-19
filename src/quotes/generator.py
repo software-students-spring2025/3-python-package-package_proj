@@ -107,7 +107,6 @@ def generate_mood_quote(mood):
     my_quotes.add(quote)
     return quote
 
-
 def generate_language_quote(language):
     """Generates a quote in another language."""
     global my_quotes

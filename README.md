@@ -83,7 +83,6 @@ python -m quotes
 ## Example Program 
 Here is a complete example program that demonstrates all functions:
 
-# example.py 
 [example.py](https://github.com/software-students-spring2025/3-python-package-package_proj/blob/main/example.py)
 
 

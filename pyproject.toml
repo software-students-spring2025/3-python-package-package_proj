@@ -17,9 +17,11 @@ readme = "README.md"
 requires-python = ">=3.11"
 
 [project.dependencies]
-setuptools
-python-dotenv
-openai
+dependencies = [
+    "setuptools",
+    "python-dotenv",
+    "openai"
+]
 
 [project.optional-dependencies]
 dev = ["pytest"]

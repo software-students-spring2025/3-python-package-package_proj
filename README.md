@@ -158,4 +158,5 @@ git commit -m "Add feature: unique feature description"
 git push origin feature/your-feature-name
 
 ```
+
 5. Create a Pull Request to the 'main' branch

@@ -85,10 +85,8 @@ Here is a complete example program that demonstrates all functions:
 
 ```bash
 # example.py 
-# insert the link to it here
-
+[example.py](https://github.com/software-students-spring2025/3-python-package-package_proj/blob/main/example.py)
 ```
-
 
 ## Development Setup
 If you would like to contribute to quotes, follow these steps: 

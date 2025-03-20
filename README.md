@@ -91,7 +91,12 @@ If you would like to contribute to quotes, follow these steps:
 
 ### Prerequisites 
 - Python 3.7 or higher 
-- pipenv 
+- pipenv
+
+### Environmental Variables 
+This package requires an OpenAI API Key to generate quotes dynamically.
+- You need to create a ```.env``` file and add the API key
+- Contact [Andy Cabindol](https://github.com/andycabindol) to obtain the ```.env``` file with the required API key. 
 
 ### Setup steps 
 1. Clone the repository: 

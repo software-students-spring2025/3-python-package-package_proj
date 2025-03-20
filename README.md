@@ -20,7 +20,7 @@ quotes is a simple Python package that generates random quotes including quotes 
 
 ## Installation 
 
-You can install quotes directly from [PyPI]("Insert link")
+You can install quotes directly from [PyPI](https://pypi.org/project/DailyQuotes/)
 ```bash
 pip install quotes
 ```

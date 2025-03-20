@@ -20,7 +20,7 @@ dailyquotes is a simple Python package that generates random quotes including qu
 
 ## Installation 
 
-You can install quotes directly from [PyPI](https://pypi.org/project/DailyQuotes/)
+You can install dailyquotes directly from [PyPI](https://pypi.org/project/DailyQuotes/)
 ```bash
 pip install dailyquotes
 ```

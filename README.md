@@ -2,7 +2,7 @@
 
 An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
 
-# quotes
+# dailyquotes
 
 ## Contributors:
 
@@ -16,23 +16,23 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 
 ## Description:
 
-quotes is a simple Python package that generates random quotes including quotes that are well-known, from celebrities, mood based, and in different languages. This python package provides an easy way to integrate meaningful quotes into projects, daily routines, or personal motivation.
+dailyquotes is a simple Python package that generates random quotes including quotes that are well-known, from celebrities, mood based, and in different languages. This python package provides an easy way to integrate meaningful quotes into projects, daily routines, or personal motivation.
 
 ## Installation 
 
 You can install quotes directly from [PyPI](https://pypi.org/project/DailyQuotes/)
 ```bash
-pip install quotes
+pip install dailyquotes
 ```
 
 ## Features 
-quotes offers four different features within the package:
+dailyquotes offers four different features within the package:
 
 ### 1. generate_quote
 This function generates a random quote and is perfect for a user who wants an entertaining quote without any specific criteria. 
 
 ```bash
-from quotes import generate_quote
+from dailyquotes import generate_quote
 quote = generate_quote()
 print(quote)
 # Output: "The only way to do great work is to love what you do."
@@ -43,7 +43,7 @@ print(quote)
 This function allows users to specify a celebrity (ex. musician, politician, historical figure, etc.) and receive a quote attributed to them. 
 
 ```bash
-from quotes import generate_celebrity_quote
+from dailyquotes import generate_celebrity_quote
 quote = generate_celebrity_quote("Albert Einstein")
 print(quote)
 # Output: "Imagination is the light that illuminates the realms of knowledge and discovery."
@@ -53,7 +53,7 @@ print(quote)
 This function allows users to input their mood (ex. happy, sad, excitement), and the function will return a quote that aligns with their emotional state. 
 
 ```bash
-from quotes import generate_mood_quote
+from dailyquotes import generate_mood_quote
 quote = generate_mood_quote("sad")
 print(quote)
 # Output: "Even when sorrow clouds the skies, remember that every raindrop has the potential to nurture a seed into a beautiful flower."
@@ -63,21 +63,21 @@ print(quote)
 This function generates a quote in a user-specified language (Spanish, French, Greek) which is useful for language learners.
 
 ```bash
-from quotes import generate_language_quote
+from dailyquotes import generate_language_quote
 quote = generate_language_quote("Greek")
 print(quote)
 # Output: "Η επιμονή είναι η αδερφή της επιτυχίας"
 ```
 
 ## Command Line Usage 
-quotes can also be used directly from the command line: 
+dailyquotes can also be used directly from the command line: 
 
 ```bash
 # Install the package 
-pip install quotes
+pip install dailyquotes
 
 # Run the CLI
-python -m quotes
+python -m dailyquotes
 ```
 
 ## Example Program 
@@ -87,7 +87,7 @@ Here is a complete example program that demonstrates all functions:
 
 
 ## Development Setup
-If you would like to contribute to quotes, follow these steps: 
+If you would like to contribute to dailyquotes, follow these steps: 
 
 ### Prerequisites 
 - Python 3.7 or higher 

@@ -70,7 +70,7 @@ print(quote)
 ```
 
 ## Command Line Usage 
-quotes can also be used directly from the commmand line: 
+quotes can also be used directly from the command line: 
 
 ```bash
 # Install the package 

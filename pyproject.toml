@@ -15,8 +15,6 @@ authors = [
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.11"
-
-[project.dependencies]
 dependencies = [
     "setuptools",
     "python-dotenv",
